@@ -24,6 +24,30 @@
     <!-- <link rel="canonical" href="https://binbasri-in.github.io/CNERLab-website/"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
         integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        .carousel-indicators li {
+            background-color: #6c757d;
+            /* Gray dots */
+            border-radius: 50%;
+            width: 12px;
+            height: 12px;
+            opacity: 0.7;
+        }
+
+        .carousel-indicators .active {
+            background-color: #343a40;
+            /* Darker active dot */
+            opacity: 1;
+        }
+
+        #carousel-caption-below h5,
+        #carousel-caption-below p {
+            margin: 0.25rem 0;
+            color: #333;
+            max-width: 90%;
+        }
+    </style>
 </head>
 
 <body class="fixed-top-nav">
@@ -32,8 +56,7 @@
             <div class="container">
                 <!-- Logo linking to homepage -->
                 <a class="navbar-brand" href="index.html">
-                    <img src="assets/img/lab-full-name-crop.png" alt="CNERLab Logo"
-                        style="height:40px; vertical-align:middle;">
+                    <img src="assets/img/logo3.png" alt="CNERLab Logo" style="height:40px; vertical-align:middle;">
                 </a>
 
                 <!-- Mobile toggle -->
@@ -78,16 +101,93 @@
     </header>
     <div class="container mt-5" role="main">
         <div class="post">
-            <header class="post-header">
-                <h1 class="post-title font-weight-bold">Computational Neuroscience and Engineering Research Lab
-                    (CNERLab)</h1>
-                <p class="desc">B.M.S Institute of Technology and Management, Bengaluru, India</p>
-            </header>
+            <div class="col-md-12 d-flex flex-column justify-content-center align-items-center"
+                style="min-height: 500px;">
+                <div id="labCarousel" class="carousel slide carousel-fade shadow rounded w-100" data-ride="carousel">
+                    <!-- Slides -->
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-caption-title="Neural Recording Setup"
+                            data-caption-text="Our EEG station used for real-time BCI experiments.">
+                            <img src="https://picsum.photos/1000/500?random=1" class="d-block w-100 rounded"
+                                alt="Lab Image 1">
+                        </div>
+                        <div class="carousel-item" data-caption-title="Embedded Hardware Zone"
+                            data-caption-text="Custom embedded systems and prototyping kits in use.">
+                            <img src="https://picsum.photos/1000/500?random=2" class="d-block w-100 rounded"
+                                alt="Lab Image 2">
+                        </div>
+                        <div class="carousel-item" data-caption-title="Student Research Space"
+                            data-caption-text="Where interdisciplinary ideas come to life.">
+                            <img src="https://picsum.photos/1000/500?random=3" class="d-block w-100 rounded"
+                                alt="Lab Image 3">
+                        </div>
+                    </div>
+
+                    <!-- Arrows -->
+                    <a class="carousel-control-prev" href="#labCarousel" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#labCarousel" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon bg-dark rounded-circle p-3" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+
+                    <!-- Indicators -->
+                    <ol class="carousel-indicators mb-0">
+                        <li data-target="#labCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#labCarousel" data-slide-to="1"></li>
+                        <li data-target="#labCarousel" data-slide-to="2"></li>
+                    </ol>
+                </div>
+
+                <!-- Custom Caption Area -->
+                <div id="carousel-caption-below" class="mt-3 text-center">
+                    <h5 class="font-weight-bold">Neural Recording Setup</h5>
+                    <p>Our EEG station used for real-time BCI experiments.</p>
+                </div>
+            </div>
             <article>
 
                 <!-- ADD MAIN CONTENT HERE - START -->
 
-
+                <div class="row justify-content-center mb-4">
+                    <!-- Team Member 1 -->
+                    <div class="col-md-8">
+                        <div class="card flex-row align-items-center shadow-sm mb-4">
+                            <div class="col-auto p-0">
+                                <img src="./assets/img/team/Saneesh Cleatus T.jpeg" class="img-fluid rounded-left" alt="Dr. Saneesh Cleatus T" style="width:120px; height:120px;">
+                            </div>
+                            <div class="col py-3">
+                                <h5 class="mb-1 font-weight-bold">Dr. Saneesh Cleatus T</h5>
+                                <p class="mb-1 text-muted">Associate Professor</p>
+                                <p class="mb-1">Department of Electronics &amp; Communication Engineering</p>
+                                <a href="https://scholar.google.com/citations?user=UkBQLOAAAAAJ" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm">
+                                    <i class="fab fa-google"></i> Google Scholar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row justify-content-center mb-4">
+                    <!-- Team Member 2 -->
+                    <div class="col-md-8">
+                        <div class="card flex-row align-items-center shadow-sm mb-4">
+                            <div class="col-auto p-0">
+                                <img src="https://randomuser.me/api/portraits/men/44.jpg" class="img-fluid rounded-left" alt="Team Member 2" style="width:120px; height:120px; object-fit:cover;">
+                            </div>
+                            <div class="col py-3">
+                                <h5 class="mb-1 font-weight-bold">Mr. </h5>
+                                <p class="mb-1 text-muted">PhD Scholar</p>
+                                <p class="mb-1">Department of Computer Science &amp; Engineering</p>
+                                <a href="https://scholar.google.com/citations?user=example2" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm">
+                                    <i class="fab fa-google"></i> Google Scholar
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
                 <!-- MAIN CONTENT END -->
 
@@ -127,6 +227,16 @@
     <script src="https://cdn.jsdelivr.net/npm/mdbootstrap@4.20.0/js/mdb.min.js"
         integrity="sha256-NdbiivsvWt7VYCt6hYNT3h/th9vSTL4EDWeGs5SN3DA=" crossorigin="anonymous"></script>
     <script src="./js/progress-bar.js"></script>
+    <script>
+        $('#labCarousel').on('slide.bs.carousel', function (e) {
+            const next = $(e.relatedTarget);
+            const title = next.data('caption-title');
+            const text = next.data('caption-text');
+
+            $('#carousel-caption-below h5').text(title);
+            $('#carousel-caption-below p').text(text);
+        });
+    </script>
 </body>
 
 </html>
